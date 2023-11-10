@@ -669,6 +669,8 @@ button:focus {
 }
 
 .hero-form-checkbox-label {
+  display: flex;
+  align-items: center;
   font-size: 12px;
   font-weight: 400;
   line-height: 1.17;
@@ -747,38 +749,134 @@ button:focus {
   .burger-menu-btn:focus {
     background-color: transparent;
   }
-}
 
-/* Burger menu is-open */
-/* .menu-close-btn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  top: 24px;
-  right: 24px;
-  width: 24px;
-  height: 24px;
-  line-height: 0;
-  border-radius: 50%;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  fill: var(--color-navy_blue);
-  background-color: var(--color-cornflower);
-  padding: 0;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
+  /* Burger menu is-open */
 
-.menu-close-btn-icon {
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
+  .burger-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999999;
+    width: 100%;
+    height: 100%;
+    background-color: var(--color-white);
 
-.menu-close-btn:focus {
-  border: none;
-}
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
 
-.menu-close-btn:focus .menu-close-btn-icon {
-  fill: var(--color-white);
-} */
+  .burger-menu.is-open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+
+  .burger-menu-wrap {
+    position: relative;
+    max-width: 320px;
+    padding: 72px 16px 40px 16px;
+    margin: 0 auto;
+  }
+
+  .menu-close-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    width: 24px;
+    height: 24px;
+    line-height: 0;
+    border-radius: 50%;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    fill: var(--color-navy_blue);
+    background-color: var(--color-cornflower);
+    padding: 0;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .menu-close-btn-icon {
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .menu-close-btn:focus {
+    border: none;
+  }
+
+  .menu-close-btn:focus .menu-close-btn-icon {
+    fill: var(--color-white);
+  }
+
+  .nav-burger-menu-list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 40px;
+    margin-bottom: 168px;
+  }
+
+  .nav-burger-menu-link {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.11;
+    letter-spacing: 0.02em;
+    text-transform: capitalize;
+    color: var(--color-navy_blue);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .nav-burger-menu-link:focus {
+    color: var(--color-ocean);
+  }
+
+  .address-burger-menu-list {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin-bottom: 48px;
+  }
+
+  .address-burger-menu-link {
+    font-style: normal;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+    color: var(--color-slate);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .address-burger-menu-link:focus {
+    color: var(--color-iris);
+  }
+
+  .social-link-list-burger-menu {
+    display: flex;
+    flex-direction: row;
+    column-gap: 40px;
+  }
+
+  .social-link-burger-menu {
+    width: 40px;
+    height: 40px;
+    background-color: var(--color-iris);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    fill: var(--color-cloud);
+  }
+
+  .social-link-burger-menu:focus {
+    background-color: var(--color-ocean);
+  }
+
+  .icon-social-footer {
+    fill: var(--color-cloud);
+  }
+}
 
 @media screen and (min-resolution: 192dpi) and (max-width: 767px),
   screen and (min-resolution: 2dppx) and (max-width: 767px),
@@ -791,7 +889,8 @@ button:focus {
 /* <==================== media for tablet ====================> */
 
 @media screen and (min-width: 768px) {
-  .burger-menu-btn {
+  .burger-menu-btn,
+  .burger-menu {
     display: none;
   }
 

@@ -517,7 +517,7 @@
       </div>
     </footer>
     <!-- Backdrop & Modal Window -->
-    <div class="backdrop is-open">
+    <div class="backdrop">
       <div class="modal">
         <button class="modal-close-btn" type="button" aria-label="modal close button">
           <svg class="modal-close-btn-icon" width="8" height="8">
@@ -578,8 +578,10 @@
                   <use href="./images/icons.svg#icon-checkmark"></use>
                 </svg>
               </span>
-              <span> I accept the terms and conditions of the </span>
-              <a class="hero-form-privacy-link" href="#">Privacy Policy</a>
+              <span class="agree-text">
+                I accept the terms and conditions of the
+                <a class="hero-form-privacy-link" href="#">Privacy Policy</a>
+              </span>
             </label>
           </div>
           <button class="hero-form-btn" type="submit">Send</button>
@@ -588,11 +590,68 @@
     </div>
     <!-- Burger menu -->
     <div class="burger-menu">
-      <button class="menu-close-btn" aria-label="menu close button">
-        <svg class="menu-close-btn-icon" width="8" height="8">
-          <use href="./images/icons.svg#icon-close"></use>
-        </svg>
-      </button>
+      <div class="burger-menu-wrap">
+        <button class="menu-close-btn" aria-label="menu close button">
+          <svg class="menu-close-btn-icon" width="8" height="8">
+            <use href="./images/icons.svg#icon-close"></use>
+          </svg>
+        </button>
+        <nav class="burger-menu-nav">
+          <ul class="nav-burger-menu-list">
+            <li class="nav-burger-menu-item">
+              <a class="nav-burger-menu-link" href="./index.html">Studio</a>
+            </li>
+            <li class="nav-burger-menu-item">
+              <a class="nav-burger-menu-link" href="">Portfolio</a>
+            </li>
+            <li class="nav-burger-menu-item">
+              <a class="nav-burger-menu-link" href="">Contacts</a>
+            </li>
+          </ul>
+        </nav>
+        <address>
+          <ul class="address-burger-menu-list">
+            <li class="address-burger-menu-item">
+              <a class="address-burger-menu-link" href="mailto:info@devstudio.com">info@devstudio.com</a>
+            </li>
+            <li class="address-burger-menu-item">
+              <a class="address-burger-menu-link" href="tel:+110001111111">+11 (000) 111-11-11</a>
+            </li>
+          </ul>
+        </address>
+        <div class="burger-menu-social-links">
+          <ul class="social-link-list-burger-menu">
+            <li class="social-link-item-burger-menu">
+              <a class="social-link-burger-menu" href="#" target="_blank">
+                <svg class="icon-social-footer" width="24" height="24">
+                  <use href="./images/icons.svg#icon-instagram"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social-link-item-burger-menu">
+              <a class="social-link-burger-menu" href="#" target="_blank">
+                <svg class="icon-social-burger-menu" width="24" height="24">
+                  <use href="./images/icons.svg#icon-twitter"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social-link-item-burger-menu">
+              <a class="social-link-burger-menu" href="#" target="_blank">
+                <svg class="icon-social-burger-menu" width="24" height="24">
+                  <use href="./images/icons.svg#icon-facebook"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social-link-item-burger-menu">
+              <a class="social-link-burger-menu" href="#" target="_blank">
+                <svg class="icon-social-burger-menu" width="24" height="24">
+                  <use href="./images/icons.svg#icon-linkedin"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
     </div>
   </body>
 </html>
