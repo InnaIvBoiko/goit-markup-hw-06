@@ -818,6 +818,10 @@ button:focus {
     fill: var(--color-white);
   }
 
+  .burger-menu-nav {
+    margin-bottom: auto;
+  }
+
   .nav-burger-menu-list {
     display: flex;
     flex-direction: column;
