@@ -327,17 +327,12 @@ button:focus {
 .portfolio-cart-item {
   display: flex;
   flex-basis: 100%;
-  height: 420px;
+  height: 400px;
   padding-bottom: 0px;
   flex-direction: column;
   align-items: flex-start;
   flex-shrink: 0;
   background-color: var(--color-white);
-  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.portfolio-cart-item:hover,
-.portfolio-cart-item:focus {
   box-shadow: var(--shadow-card);
 }
 
@@ -485,6 +480,7 @@ button:focus {
   background-color: transparent;
   color: var(--color-white);
   padding-left: 16px;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
 }
 
 .footer-form-field::placeholder {
@@ -695,7 +691,8 @@ button:focus {
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  width: 16px;
+  min-width: 16px;
+  max-width: 16px;
   height: 16px;
   border-radius: 2px;
   border: 1px solid var(--color-modal-overlay);
@@ -785,6 +782,10 @@ button:focus {
     max-width: 320px;
     padding: 72px 16px 40px 16px;
     margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    overflow-y: auto;
   }
 
   .menu-close-btn {
@@ -821,7 +822,7 @@ button:focus {
     display: flex;
     flex-direction: column;
     row-gap: 40px;
-    margin-bottom: 168px;
+    margin-bottom:48px;
   }
 
   .nav-burger-menu-link {
@@ -994,7 +995,8 @@ button:focus {
 
   .portfolio-cart-item {
     flex-basis: calc((100% - 24px) / 2);
-  }
+      height: 420px;
+    }
 
   .carts-img {
     width: 100%;
@@ -1125,6 +1127,13 @@ button:focus {
 
   .portfolio-cart-item {
     flex-basis: calc((100% - 48px) / 3);
+    box-shadow: none;
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+    
+  .portfolio-cart-item:hover,
+  .portfolio-cart-item:focus {
+    box-shadow: var(--shadow-card);
   }
 
   .carts-img {
